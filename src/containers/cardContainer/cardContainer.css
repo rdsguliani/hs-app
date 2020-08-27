@@ -1,0 +1,23 @@
+
+.cardHolder{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardHeader{
+    margin: 0 1rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 480px) {
+    .cardHeader {
+        flex-direction: column;
+        height: 3rem;
+    }
+
+    .cardHolder {
+        justify-content: center;
+    }
+}

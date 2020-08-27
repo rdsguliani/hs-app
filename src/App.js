@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import CardContainer from './containers/cardContainer/cardContainer';
+import { Spinner } from './UI/spinner/spinner';
 
 function App() {
   return (
-    <div className="App">
+    <div >
+      <Spinner></Spinner>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <h1>HighSpot Image App</h1>
       </header>
+
+      <CardContainer></CardContainer>
+
     </div>
   );
 }

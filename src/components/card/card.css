@@ -1,0 +1,16 @@
+
+.card{
+    width: 250px;
+    border: solid .1rem grey;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.img{
+    width: 200px;
+}
+
+.list{
+    list-style: none;
+    padding: 0px;
+}
