@@ -37,19 +37,25 @@ class CardContainer extends  React.Component {
             
     }
 
-    async getCards() {
+    getCards() {
         try {
             showSpinner();
-            const result = await getCards(this.state.currentPage, this.state.search)
-            const oldCards = this.state.cards;
-            oldCards.push(...result.cards)
-            
-            this.setState({
-                cards: oldCards,
-                totalItems: result._totalCount
+            getCards(this.state.currentPage, this.state.search)
+            .then (result => {
+                const oldCards = this.state.cards;
+                oldCards.push(...result.cards)
+                
+                this.setState({
+                    cards: oldCards,
+                    totalItems: result._totalCount
+                })
+                hideSpinner();
+
+            }).catch(e => {
+                console.log(e);
+                hideSpinner();
             })
 
-            hideSpinner();
         }
         catch (e) {
             hideSpinner();
